@@ -1,0 +1,38 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.8.2'
+    }
+}
+
+apply plugin: 'com.android.application'
+
+repositories {
+    google()
+    mavenCentral()
+}
+
+android {
+    namespace "com.example.bootcomplete"
+    compileSdkVersion 34
+
+    defaultConfig {
+        applicationId "com.example.bootcomplete"
+        minSdkVersion 34
+        targetSdkVersion 34
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            res.srcDirs = ['res']
+        }
+    }
+}
+
+dependencies {
+}
